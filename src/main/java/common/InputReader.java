@@ -41,4 +41,27 @@ public class InputReader {
 		}
 		return input;
 	}
+	
+	public static List<List<String>> readFileAsNestedListOfStrings(String path, int groupSize) {
+		File file = new File(path);
+		List<List<String>> input = new ArrayList<>();
+		try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+			String line;
+			ArrayList<String> list = new ArrayList<>();
+			int i = 0;
+			while ((line = br.readLine()) != null) {
+				if (i >= groupSize) {
+					input.add(list);
+					list = new ArrayList<>();
+					i = 0;
+				}
+				list.add(line);
+				i++;
+			}
+			input.add(list);
+		} catch (Exception e) {
+			System.out.println("Exception!");
+		}
+		return input;
+	}
 }
