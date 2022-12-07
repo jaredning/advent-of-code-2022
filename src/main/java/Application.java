@@ -7,6 +7,7 @@ import solutions.Day3;
 import solutions.Day4;
 import solutions.Day5;
 import solutions.Day6;
+import solutions.Day7;
 
 public class Application {
 	public static void main(String[] args) throws Exception {
@@ -22,8 +23,11 @@ public class Application {
 		day4.solve("src/main/resources/solutions/day4-input.txt");
 		Day5 day5 = new Day5();
 		day5.solve("src/main/resources/solutions/day5-input.txt");
-	 */
 		Day6 day6 = new Day6();
 		day6.solve("src/main/resources/solutions/day6-input.txt");
+	
+	 */
+		Day7 day7 = new Day7();
+		day7.solve("src/main/resources/solutions/day7-input.txt");
 	}
 }
