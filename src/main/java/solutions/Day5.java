@@ -71,13 +71,13 @@ public class Day5 {
 	}
 	
 	private void performOrder2(int numToMove, int start, int target) {
-		List<String> craneIsHolding = new ArrayList<>();
+		ArrayDeque<String> craneIsHolding = new ArrayDeque<>();
 		for (int i = 0; i < numToMove; i++) {
 			String crate = yard2.get(start - 1).pop();
-			craneIsHolding.add(crate);
+			craneIsHolding.push(crate);
 		}
-		for (int i = numToMove - 1; i >= 0; i--) {
-			yard2.get(target - 1).push(craneIsHolding.get(i));
+		for (int i = 0; i < numToMove; i++) {
+			yard2.get(target - 1).push(craneIsHolding.pop());
 		}
 	}
 }
