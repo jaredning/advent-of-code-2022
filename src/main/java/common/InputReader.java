@@ -64,4 +64,18 @@ public class InputReader {
 		}
 		return input;
 	}
+	
+	public static String readFileAsString(String path) {
+		File file = new File(path);
+		String input = "";
+		try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+			String line;
+			while ((line = br.readLine()) != null) {
+				input = line;
+			}
+		} catch (Exception e) {
+			System.out.println("Exception!");
+		}
+		return input;
+	}
 }
