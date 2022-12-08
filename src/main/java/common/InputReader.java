@@ -78,4 +78,24 @@ public class InputReader {
 		}
 		return input;
 	}
+	
+	public static List<List<Integer>> readFileAs2DIntegerList(String path) {
+		File file = new File(path);
+		List<List<Integer>> input = new ArrayList<>();
+		try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+			String line;
+			while ((line = br.readLine()) != null) {
+				ArrayList<Integer> list = new ArrayList<>();
+				for (char c: line.toCharArray()) {
+					list.add((int) c);
+				}
+				input.add(list);
+			}
+		} catch (Exception e) {
+			System.out.println("Exception!");
+		}
+		System.out.println(input.get(0).size());
+		System.out.println(input.size());
+		return input;
+	}
 }
