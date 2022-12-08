@@ -11,7 +11,7 @@ public class Day8 {
 	public void solve(String path) {
 		List<List<Integer>> trees = InputReader.readFileAs2DIntegerList(path);
 		int numVisible = 0;
-		List<Integer> maxScenicScore = new ArrayList<>();
+		List<Integer> scenicScores = new ArrayList<>();
 		for (int i = 0; i < trees.size(); i++) {
 			for (int j = 0; j < trees.get(i).size(); j++) {
 				if (i == 0 || i == trees.size() - 1 || j == 0 || j == trees.get(0).size() - 1) {
@@ -21,11 +21,11 @@ public class Day8 {
 						numVisible++;
 					}
 				}
-				maxScenicScore.add(calculateScenicScore(trees, trees.get(i).get(j), i, j));
+				scenicScores.add(calculateScenicScore(trees, trees.get(i).get(j), i, j));
 			}
 		}
 		System.out.println(numVisible);
-		System.out.println(Collections.max(maxScenicScore));
+		System.out.println(Collections.max(scenicScores));
 
 	}
 	
