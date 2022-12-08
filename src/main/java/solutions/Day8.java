@@ -7,7 +7,11 @@ import java.util.List;
 import common.InputReader;
 
 public class Day8 {
-	
+	/**
+	 * For each tree, we can simply iterate in each direction until we find a tree that is the same size or bigger
+	 * than the tree of interest.
+	 * O(n) runtime
+	 */
 	public void solve(String path) {
 		List<List<Integer>> trees = InputReader.readFileAs2DIntegerList(path);
 		int numVisible = 0;

@@ -8,6 +8,10 @@ import java.util.Set;
 import common.InputReader;
 
 public class Day3 {
+	/**
+	 * We can simply add the contents of each bag / each half bag to a Set and take the intersection(s) to find the common elements.
+	 * O(n) runtime
+	 */
 	public void solve(String path) {
 		List<String> input = InputReader.readFileAsListOfStrings(path);
 		int sumOfPriorities = 0;

@@ -6,6 +6,13 @@ import java.util.HashSet;
 import common.InputReader;
 
 public class Day6 {
+	/**
+	 * We can consider a sliding window with left and right pointers - as we expand the window to the right, we check to see if the character
+	 * has been seen before in the current window - if not, we continue expanding the window to the right. If so, then we need to shrink the left
+	 * end of the window up to but not including the original position of the duplicate character, to guarantee uniqueness of each character currently
+	 * contained in the sliding window.
+	 * O(n) runtime
+	 */
 	public void solve(String path) {
 		String input = InputReader.readFileAsString(path);
 		char[] characters = input.toCharArray();

@@ -8,6 +8,13 @@ import common.InputReader;
 
 public class Day7 {
 
+	/**
+	 * We can consider this as a tree with directories as nodes and files as leaves. We wish to track total size of each node.
+	 * To do so we can perform depth-first-search on every directory, calculating the sizes of each child and summing the sizes
+	 * of each child as the total size of the directory. We can leave files out of our constructed Directory tree as they
+	 * simply contribute to the total size of their parent directory.
+	 * O(n) runtime
+	 */
 	public void solve(String path) {
 		List<String> input = InputReader.readFileAsListOfStrings(path);
 		Directory root = buildFileSystemTree(input);

@@ -43,7 +43,14 @@ public class Day5 {
 			new ArrayDeque<>(Arrays.asList("J", "D", "N", "H", "F", "T", "Z", "B")),
 			new ArrayDeque<>(Arrays.asList("T", "F", "B", "N", "Q", "L", "H"))
 	);
-	
+
+	/**
+	 * We can use a Stack to represent each stack of crates and perform push() and pop() operations to mimic the
+	 * commands given to the crane, then peek() at the top of each stack to generate output.
+	 * To move multiple crates at a time, we can simply push() crates into a temporary stack, then pop() crates off
+	 * the temporary stack once all crates have been moved off the initial stack onto the target stack to maintain order.
+	 * O(n) runtime
+	 */
 	public void solve(String path) {
 		List<String> input = InputReader.readFileAsListOfStrings(path);
 		for (String line : input) {

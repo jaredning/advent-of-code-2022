@@ -5,6 +5,13 @@ import java.util.List;
 import common.InputReader;
 
 public class Day4 {
+	/**
+	 * We can simply compare the upper and lower bounds of each range in order to determine
+	 * if a pair of ranges has overlap or if one is fully contained in the other, accounting
+	 * for the fact that the given pairs of ranges are not sorted (that is, the second range may
+	 * start before the first range or vice versa).
+	 * O(n) runtime
+	 */
 	public void solve(String path) {
 		List<String> input = InputReader.readFileAsListOfStrings(path);
 		int numFullOverlaps = 0;

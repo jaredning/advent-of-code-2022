@@ -16,7 +16,12 @@ public class Day2 {
 	HashMap<String, Integer> lose = new HashMap<>();
 	HashMap<String, HashMap<String, Integer>> scoreMatrix = new HashMap<>();
 	HashMap<String, HashMap<String, Integer>> scoreMatrix2 = new HashMap<>();
-	
+
+	/**
+	 * Given that we know all possible score results, we can save calculating each outcome and instead just
+	 * look up the expected score from a Map instead.
+	 * O(n) runtime
+	 */
 	public void solve(String path) {
 		List<String> input = InputReader.readFileAsListOfStrings(path);
 		initializeMaps();

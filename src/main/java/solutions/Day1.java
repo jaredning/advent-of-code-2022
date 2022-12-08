@@ -7,6 +7,10 @@ import java.util.List;
 import common.InputReader;
 
 public class Day1 {
+	/**
+	 * We simply sum each sub-list, then sort the list of sums and return the max.
+	 * O(n log n) runtime (due to sorting)
+	 */
 	public void solve(String path) throws Exception {
 		List<List<Integer>> input = InputReader.readFileAsNestedListOfInts(path);
 		Integer sum;
