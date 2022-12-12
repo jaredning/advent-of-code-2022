@@ -9,6 +9,7 @@ import solutions.Day5;
 import solutions.Day6;
 import solutions.Day7;
 import solutions.Day8;
+import solutions.Day9;
 
 public class Application {
 	public static void main(String[] args) throws Exception {
@@ -28,8 +29,11 @@ public class Application {
 		day6.solve("src/main/resources/solutions/day6-input.txt");
 		Day7 day7 = new Day7();
 		day7.solve("src/main/resources/solutions/day7-input.txt");
-	 */
 		Day8 day8 = new Day8();
 		day8.solve("src/main/resources/solutions/day8-input.txt");
+	 */
+		Day9 day9 = new Day9();
+		day9.solve("src/main/resources/solutions/day9-input.txt");
+		day9.solve2("src/main/resources/solutions/day9-input.txt");
 	}
 }
