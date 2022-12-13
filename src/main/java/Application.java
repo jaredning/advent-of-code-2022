@@ -3,6 +3,7 @@ import java.util.List;
 import common.InputReader;
 import solutions.Day1;
 import solutions.Day10;
+import solutions.Day11;
 import solutions.Day2;
 import solutions.Day3;
 import solutions.Day4;
@@ -35,8 +36,10 @@ public class Application {
 		Day9 day9 = new Day9();
 		day9.solve("src/main/resources/solutions/day9-input.txt");
 		day9.solve2("src/main/resources/solutions/day9-input.txt");
-	 */
 		Day10 day10 = new Day10();
 		day10.solve("src/main/resources/solutions/day10-input.txt");
+		*/
+		Day11 day11 = new Day11();
+		day11.solve("src/main/resources/solutions/day11-input.txt");
 	}
 }
