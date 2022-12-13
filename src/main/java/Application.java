@@ -2,6 +2,7 @@ import java.util.List;
 
 import common.InputReader;
 import solutions.Day1;
+import solutions.Day10;
 import solutions.Day2;
 import solutions.Day3;
 import solutions.Day4;
@@ -31,9 +32,11 @@ public class Application {
 		day7.solve("src/main/resources/solutions/day7-input.txt");
 		Day8 day8 = new Day8();
 		day8.solve("src/main/resources/solutions/day8-input.txt");
-	 */
 		Day9 day9 = new Day9();
 		day9.solve("src/main/resources/solutions/day9-input.txt");
 		day9.solve2("src/main/resources/solutions/day9-input.txt");
+	 */
+		Day10 day10 = new Day10();
+		day10.solve("src/main/resources/solutions/day10-input.txt");
 	}
 }
